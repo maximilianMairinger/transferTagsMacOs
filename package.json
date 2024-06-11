@@ -1,6 +1,6 @@
 {
   "name": "transfer-tags-mac-os",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Transfer macos tags to a respective file with different extension.",
   "main": "./app/dist/esm/transferTagsMacOs.mjs",
   "types": "./app/dist/esm/transferTagsMacOs.d.ts",
