@@ -17,7 +17,7 @@
     "buildESM": "tsc -p ./tsconfig.prod.esm.json && mjsify app/dist esm cjs",
     "buildCJS": "tsc -p ./tsconfig.prod.cjs.json && npm run buildCJS2",
     "buildCJS2": "concurrently \"rollup --config rollup.node.prod.config.mjs\" \"rollup --config rollup.node.prod.cli.config.mjs\" --hide 0",
-    "dev": "npm run devWeb",
+    "dev": "npm run devNode",
     "devWeb": "concurrently \"rollup --config rollup.web.dev.config.mjs -w\" \"node devServer.mjs\" --raw ",
     "devNode": "concurrently \"rollup --config rollup.node.dev.config.mjs -w\" \"rollup --config rollup.node.prod.cli.config.mjs\" \"wait-on repl/dist/crossPlatformSpecs-repl.js && echo && echo Run \\'npm run repl\\' to run repl.\" --raw",
     "deploy": "npm run build && npm publish",
@@ -31,11 +31,11 @@
     "url": "git+https://github.com/maximilianMairinger/transferTagsMacOs.git"
   },
   "keywords": [
-  "transfer",
-  "tags",
-  "mac",
-  "os"
-],
+    "transfer",
+    "tags",
+    "mac",
+    "os"
+  ],
   "author": "maximilianMairinger",
   "license": "ISC",
   "bugs": {
@@ -64,8 +64,10 @@
     "webpack-merge": "^5.0.9"
   },
   "dependencies": {
-    "commander": "^10.0.1",
     "colorful-cli-logger": "^1.0.0",
-    "req-package-json": "^2.1.2"
+    "commander": "^10.0.1",
+    "osx-tag": "^0.4.8",
+    "req-package-json": "^2.1.2",
+    "sanitize-against": "^1.5.4"
   }
 }
